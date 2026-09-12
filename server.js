@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import pinoHttp from 'pino-http';
-import { initializeSchema } from './db/database.js';
+import { getAllProducts, initializeSchema } from './db/database.js';
 import { apiNotFound, errorHandler } from './middleware/errorHandler.js';
 import { csrfProtection, sendCsrfToken } from './middleware/csrf.js';
 import { generalApiLimiter } from './middleware/rateLimiters.js';
@@ -19,6 +19,9 @@ import { logger } from './server/logger.js';
 
 validateProductionConfig();
 initializeSchema();
+if (getAllProducts().length === 0) {
+  await import('./db/seed.js');
+}
 
 const app = express();
 const staticAssetPattern = /\.(?:css|js|png|jpe?g|webp|svg|ico|woff2)$/i;
@@ -28,6 +31,10 @@ app.set('trust proxy', 1);
 app.use(enforceHttps);
 app.use(securityHeaders());
 app.use(pinoHttp({ logger }));
+
+app.get('/products/dark-cherry-conserve.html', (_req, res) => {
+  res.redirect(302, '/products/tart-red-cherry-conserve.html');
+});
 
 app.post('/api/webhooks/stripe', express.raw({ type: 'application/json', limit: '2mb' }), handleStripeWebhook);
 app.use(express.json({ limit: '20kb' }));

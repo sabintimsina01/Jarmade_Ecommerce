@@ -86,3 +86,15 @@ use the existing seed stock default of 100; enter actual inventory before sellin
 For a fresh installation, continue to use `npm run db:seed`.
 
 Apricot and Tart Red Cherry use the Jarmade logo until matching product photos are supplied.
+
+## Restored storefront content
+
+The landing page now loads the same full catalog as All Products. Raspberry and
+Blueberry descriptions and serving ideas were restored from the original static
+site. The old `products/dark-cherry-conserve.html` URL redirects to Tart Red Cherry,
+using the latest owner-provided product name and $9 price. Confirm this mapping if
+they are distinct products.
+
+A fresh empty database is populated on first startup. Existing databases are not
+reseeded at startup; use `npm run db:update-catalog` while the app is stopped to
+apply restored content without resetting existing stock or historical orders.
