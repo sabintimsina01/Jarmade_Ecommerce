@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locations | Jarmade</title>
+    <meta
+      name="description"
+      content="Find Jarmade locations, current availability, FAQs, and contact details for small-batch conserves and relish."
+    />
+    <link rel="icon" type="image/png" href="/images/brand-assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/brand-assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="z-50 border-b border-brand-border bg-[#F8F0E4] text-[#3A241B] shadow-sm">
+      <div class="mx-auto flex h-[68px] max-w-[1500px] items-center justify-between gap-6 px-4 lg:px-6">
+        <a href="index.html" class="flex flex-shrink-0 items-center border border-transparent px-2 py-1 transition-colors hover:border-[#657A58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Jarmade home">
+          <img src="images/brand-assets/jarmade-logo.png" alt="Jarmade handcrafted small batch" class="h-11 w-auto object-contain sm:h-12" />
+        </a>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+          <a href="index.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Home</a>
+          <a href="all-jars.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Products</a>
+          <a href="location.html" aria-current="page" class="border border-[#657A58]/35 bg-[#657A58]/10 px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/45 hover:bg-[#657A58]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Locations</a>
+          <a href="index.html#story" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Our Story</a>
+          <a href="#faq" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">FAQ</a>
+          <a href="#contact" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Contact</a>
+          <a href="cart.html" class="inline-flex items-center gap-2 border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Cart">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+            <span>Cart</span>
+            <span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span>
+          </a>
+        </nav>
+
+        <a href="cart.html" class="relative ml-auto flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Cart">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+          <span data-cart-count class="absolute right-0 top-0 inline-flex min-w-[1.1rem] items-center justify-center bg-[#7A3E4D] px-1 py-0.5 text-[9px] font-semibold leading-none text-white">0</span>
+        </a>
+
+        <button id="menu-toggle" class="flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
+          <svg id="menu-open-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-[#526847] bg-[#657A58] text-[#FFF8EC] md:hidden">
+        <div class="flex flex-col">
+          <a href="index.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Home</a>
+          <a href="all-jars.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Products</a>
+          <a href="location.html" aria-current="page" class="border-b border-[#FFF8EC]/20 bg-[#526847] px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Locations</a>
+          <a href="index.html#story" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Our Story</a>
+          <a href="#faq" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">FAQ</a>
+          <a href="#contact" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Contact</a>
+          <a href="cart.html" class="flex items-center justify-between border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]"><span>Cart</span><span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-brand-cream py-14 lg:py-20">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
+          <div>
+            <h1 class="whitespace-nowrap font-display text-[28px] font-normal leading-[1.05] tracking-[-0.02em] text-[#3A241B] sm:text-[36px] lg:text-[44px]">Find Jarmade near you</h1>
+            <p class="mt-5 max-w-2xl font-sans text-[16px] font-normal leading-[1.75] text-[#5f4636]">
+              Ask about current jars, local pickup, and nearby availability for small-batch conserves and green tomato relish.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#locations" class="bg-[#7A3E4D] px-8 py-3.5 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">View Locations</a>
+              <a href="#contact" class="border border-brand-brown px-8 py-3.5 text-center font-sans text-[13px] font-medium text-brand-brown transition-colors hover:bg-brand-brown hover:text-brand-cream">Send a Message</a>
+            </div>
+          </div>
+          <div class="border border-brand-border bg-[#FFF8ED] p-6 shadow-sm lg:p-8">
+            <p class="font-display text-[26px] font-normal leading-tight text-[#3A241B]">Current availability</p>
+            <p class="mt-4 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">
+              Product availability may vary by batch and season. Call ahead or send a quick note before visiting if you are looking for a specific jar.
+            </p>
+            <div class="mt-6 border-t border-brand-border pt-6">
+              <p class="font-sans text-[11px] font-medium uppercase leading-none tracking-[0.18em] text-[#7B5F4E]">Email</p>
+              <a href="mailto:michaelstewartballard@gmail.com" class="mt-2 inline-block font-sans text-[15px] font-semibold text-[#7A3E4D] hover:underline">michaelstewartballard@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" class="border-y border-brand-border bg-[#DDE5D7] py-14 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-12">
+          <h2 class="font-display text-[28px] font-normal leading-[1.08] tracking-[-0.02em] text-[#3A241B] sm:text-[34px] lg:text-[42px]">Locations</h2>
+          <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <article class="border border-brand-border bg-[#FFF8ED] p-6 shadow-sm lg:p-8">
+              <p class="font-sans text-[11px] font-medium uppercase leading-none tracking-[0.18em] text-[#7B5F4E]">Home Base</p>
+              <h3 class="mt-3 font-display text-[26px] font-normal leading-tight text-[#3A241B]">Irresistible Foods LLC</h3><p class="mt-4 font-sans text-[15px]">Owner: Michael Ballard<br /><a href="tel:+17744372055" class="text-[#7A3E4D] hover:underline">774-437-2055</a></p>
+              <p class="mt-4 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">
+                Charlotte, NC<br />
+                United States
+              </p>
+              <a href="mailto:michaelstewartballard@gmail.com" class="mt-5 inline-block font-sans text-[14px] font-semibold text-[#7A3E4D] hover:underline">michaelstewartballard@gmail.com</a>
+            </article>
+
+            <article class="border border-brand-border bg-[#FFF8ED] p-6 shadow-sm lg:p-8">
+              <p class="font-sans text-[11px] font-medium uppercase leading-none tracking-[0.18em] text-[#7B5F4E]">Current Location</p>
+              <h3 class="mt-3 font-display text-[26px] font-normal leading-tight text-[#3A241B]">Springs Farm</h3>
+              <p class="mt-4 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">
+                1010 Springfield Parkway<br />
+                Fort Mill, SC 29715<br />
+                <a href="tel:18039846344" class="font-semibold text-[#7A3E4D] hover:underline">803-984-6344</a>
+              </p>
+              <p class="mt-5 border-t border-brand-border pt-5 font-sans text-[14px] font-normal leading-[1.7] text-[#6B5145]">Call ahead for the latest jar selection and current availability.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-brand-cream py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl px-6 lg:px-12">
+          <h2 class="font-display text-[28px] font-normal leading-[1.08] tracking-[-0.02em] text-[#3A241B] sm:text-[34px] lg:text-[42px]">Location FAQ</h2>
+          <div class="mt-8 divide-y divide-brand-border border-y border-brand-border">
+            <div class="faq-item"><h3><button id="faq-trigger-1" type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left font-sans text-[15px] font-semibold leading-snug text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A]" aria-expanded="false" aria-controls="faq-panel-1"><span>Where can I find Jarmade right now?</span><span class="faq-icon flex h-7 w-7 flex-shrink-0 items-center justify-center border border-[#7A3E4D] text-[20px] leading-none text-[#7A3E4D]" aria-hidden="true">+</span></button></h3><div id="faq-panel-1" class="faq-panel hidden pb-5 pr-11" role="region" aria-labelledby="faq-trigger-1"><p class="font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">Jarmade is currently available at Springs Farm, 1010 Springfield Parkway, Fort Mill, SC 29715. You can call 803-984-6344 before visiting.</p></div></div>
+            <div class="faq-item"><h3><button id="faq-trigger-2" type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left font-sans text-[15px] font-semibold leading-snug text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A]" aria-expanded="false" aria-controls="faq-panel-2"><span>Should I call before visiting?</span><span class="faq-icon flex h-7 w-7 flex-shrink-0 items-center justify-center border border-[#7A3E4D] text-[20px] leading-none text-[#7A3E4D]" aria-hidden="true">+</span></button></h3><div id="faq-panel-2" class="faq-panel hidden pb-5 pr-11" role="region" aria-labelledby="faq-trigger-2"><p class="font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">Yes. Small-batch availability can change by season and batch, so calling ahead is the best way to confirm current jars.</p></div></div>
+            <div class="faq-item"><h3><button id="faq-trigger-3" type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left font-sans text-[15px] font-semibold leading-snug text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A]" aria-expanded="false" aria-controls="faq-panel-3"><span>Can I ask about a specific jar?</span><span class="faq-icon flex h-7 w-7 flex-shrink-0 items-center justify-center border border-[#7A3E4D] text-[20px] leading-none text-[#7A3E4D]" aria-hidden="true">+</span></button></h3><div id="faq-panel-3" class="faq-panel hidden pb-5 pr-11" role="region" aria-labelledby="faq-trigger-3"><p class="font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">Yes. Use the form below to ask about Strawberry Smash, Blackberry Blast, Big Red Peach, O Henry Peach, Green Tomato Relish, or gift-basket availability.</p></div></div>
+            <div class="faq-item"><h3><button id="faq-trigger-4" type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left font-sans text-[15px] font-semibold leading-snug text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A]" aria-expanded="false" aria-controls="faq-panel-4"><span>Can I buy online?</span><span class="faq-icon flex h-7 w-7 flex-shrink-0 items-center justify-center border border-[#7A3E4D] text-[20px] leading-none text-[#7A3E4D]" aria-hidden="true">+</span></button></h3><div id="faq-panel-4" class="faq-panel hidden pb-5 pr-11" role="region" aria-labelledby="faq-trigger-4"><p class="font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">Yes. Online checkout is available for jars shown in stock, and the form is still available for local location and current availability questions.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-[#657A58] px-6 py-16 text-[#FFF8EC] lg:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="border border-[#DCCDBA] bg-[#FFFDF8] p-4 shadow-[0_22px_60px_rgba(44,26,14,0.18)] sm:p-6 lg:grid lg:grid-cols-[0.72fr_1fr] lg:gap-8 lg:p-8">
+            <div class="border-b border-[#DCCDBA] pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+              <p class="font-display text-[24px] font-normal leading-tight text-[#3A241B]">Contact Jarmade</p>
+              <p class="mt-4 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">
+                Ask about nearby availability, current jars, pickup options, gift baskets, or local market questions.
+              </p>
+              <a href="mailto:michaelstewartballard@gmail.com" class="mt-5 inline-block font-sans text-[14px] font-semibold text-[#7A3E4D] hover:underline">michaelstewartballard@gmail.com</a>
+            </div>
+
+            <div class="mt-8 lg:mt-0">
+              <p class="font-display text-[24px] font-normal leading-tight text-[#3A241B]">Ask about availability</p>
+              <p class="mt-3 font-sans text-[15px] font-normal leading-[1.7] text-[#6B5145]">Tell us which jar or location you are interested in.</p>
+              <p class="mt-3 font-sans text-[13px] font-medium text-[#7A3E4D]">We usually reply within 1-2 business days.</p>
+
+              <form id="order-form" action="/api/contact" method="POST" class="mt-6">
+                <input type="hidden" name="_subject" value="New Jarmade location inquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_csrf" value="" data-csrf-field />
+                <label class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Name</span><input id="form-name" name="name" required type="text" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Email</span><input id="form-email" name="email" required type="email" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Phone</span><input id="form-phone" name="phone" type="tel" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Product</span><select id="form-product" name="product" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20"><option>General availability</option><option>Strawberry Smash Conserve</option><option>Blackberry Blast Conserve</option><option>Big Red Peach Conserve</option><option>O Henry Peach Conserve</option><option>Green Tomato Relish</option></select></label>
+                </div>
+                <label class="mt-5 block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Message</span><textarea id="form-message" name="message" rows="5" class="w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" placeholder="Ask about Springs Farm availability, current jars, pickup options, or gift basket questions."></textarea></label>
+                <button type="submit" class="mt-6 w-full bg-[#7A3E4D] px-8 py-4 font-sans text-[14px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Send Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-brown text-brand-cream">
+      <div class="mx-auto max-w-[1500px] px-6 py-6 lg:px-8 lg:py-8">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">About</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="mailto:michaelstewartballard@gmail.com" class="hover:text-[#E9DADF]">Contact Us</a></li>
+              <li><a href="index.html#story" class="hover:text-[#E9DADF]">About Us</a></li>
+              <li><a href="location.html" class="hover:text-[#E9DADF]">Locations</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Shop</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="all-jars.html" class="hover:text-[#E9DADF]">All Products</a></li>
+              <li><a href="all-jars.html" class="hover:text-[#E9DADF]">Bestsellers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Help</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Cancellations & Returns</a></li>
+              <li><a href="#faq" class="hover:text-[#E9DADF]">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Consumer Policy</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Return Policy</a></li>
+              <li><a href="pages/terms-of-use.html" class="hover:text-[#E9DADF]">Terms of Use</a></li>
+              <li><a href="pages/security.html" class="hover:text-[#E9DADF]">Security</a></li>
+              <li><a href="pages/privacy.html" class="hover:text-[#E9DADF]">Privacy</a></li>
+              <li><a href="pages/sitemap.html" class="hover:text-[#E9DADF]">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Contact Us</h3>
+            <p class="font-sans text-[13px] font-normal leading-[1.8] text-brand-cream/75">
+              Irresistible Foods LLC<br />Owner: Michael Ballard<br /><a href="tel:+17744372055" class="text-[#E9DADF] hover:underline">774-437-2055</a><br />
+              Charlotte, NC<br />
+              United States<br /><br />
+              <a href="mailto:michaelstewartballard@gmail.com" class="text-[#E9DADF] hover:underline">michaelstewartballard@gmail.com</a>
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Social</h3>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-sage text-white">f</a>
+              <a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full bg-[#7A3E4D] text-white">ig</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+
+      function setMobileMenuOpen(isOpen) {
+        mobileMenu?.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+        menuToggle?.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      menuToggle?.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        setMobileMenuOpen(!expanded);
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMobileMenuOpen(false);
+        }
+      });
+
+      const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+
+      function resetMobileMenuOnDesktop(event) {
+        if (event.matches) {
+          setMobileMenuOpen(false);
+        }
+      }
+
+      desktopMediaQuery.addEventListener('change', resetMobileMenuOnDesktop);
+      resetMobileMenuOnDesktop(desktopMediaQuery);
+
+      const faqTriggers = Array.from(document.querySelectorAll('.faq-trigger'));
+
+      function setFaqItemOpen(trigger, isOpen) {
+        const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        const icon = trigger.querySelector('.faq-icon');
+
+        trigger.setAttribute('aria-expanded', String(isOpen));
+        trigger.style.backgroundColor = isOpen ? '#E9DADF' : '';
+        trigger.style.color = isOpen ? '#7A3E4D' : '';
+        panel?.classList.toggle('hidden', !isOpen);
+
+        if (icon) {
+          icon.textContent = isOpen ? '-' : '+';
+          icon.style.backgroundColor = isOpen ? '#E9DADF' : '';
+          icon.style.borderColor = '#7A3E4D';
+          icon.style.color = '#7A3E4D';
+        }
+      }
+
+      faqTriggers.forEach((trigger, index) => {
+        trigger.addEventListener('click', () => {
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          setFaqItemOpen(trigger, !isExpanded);
+        });
+
+        trigger.addEventListener('keydown', (event) => {
+          let nextIndex = null;
+
+          if (event.key === 'ArrowDown') {
+            nextIndex = (index + 1) % faqTriggers.length;
+          } else if (event.key === 'ArrowUp') {
+            nextIndex = (index - 1 + faqTriggers.length) % faqTriggers.length;
+          } else if (event.key === 'Home') {
+            nextIndex = 0;
+          } else if (event.key === 'End') {
+            nextIndex = faqTriggers.length - 1;
+          }
+
+          if (nextIndex !== null) {
+            event.preventDefault();
+            faqTriggers[nextIndex]?.focus();
+          }
+        });
+      });
+    </script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

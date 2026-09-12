@@ -1,0 +1,33 @@
+{
+  "name": "jarmade",
+  "version": "1.0.0",
+  "description": "Node.js-powered Jarmade static storefront with a SQLite product catalog API.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "npm run build:css && node --no-warnings=ExperimentalWarning server.js",
+    "start": "node --no-warnings=ExperimentalWarning server.js",
+    "db:seed": "node --no-warnings=ExperimentalWarning db/seed.js",
+    "build:css": "tailwindcss -c ./tailwind.config.js -i ./src/styles.css -o ./public/css/styles.css --minify",
+    "watch:css": "tailwindcss -c ./tailwind.config.js -i ./src/styles.css -o ./public/css/styles.css --watch",
+    "prestart": "npm run build:css",
+    "db:update-catalog": "node --no-warnings=ExperimentalWarning db/seed.js --update"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0",
+    "stripe": "^22.6.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Jars | Jarmade</title>
+    <meta
+      name="description"
+      content="Browse all handcrafted Jarmade conserves and relish made with fresh local flavor in Charlotte, NC."
+    />
+    <link rel="canonical" href="https://jarmade.com/all-jars.html" />
+    <link rel="icon" type="image/png" href="/images/brand-assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/brand-assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="z-50 border-b border-brand-border bg-[#F8F0E4] text-[#3A241B] shadow-sm">
+      <div class="mx-auto flex h-[68px] max-w-[1500px] items-center justify-between gap-6 px-4 lg:px-6">
+        <a href="index.html" class="flex flex-shrink-0 items-center border border-transparent px-2 py-1 transition-colors hover:border-[#657A58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Jarmade home">
+          <img src="images/brand-assets/jarmade-logo.png" alt="Jarmade handcrafted small batch" class="h-11 w-auto object-contain sm:h-12" />
+        </a>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+          <a href="index.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Home</a>
+          <a href="all-jars.html" aria-current="page" class="border border-[#657A58]/35 bg-[#657A58]/10 px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/45 hover:bg-[#657A58]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Products</a>
+          <a href="location.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Locations</a>
+          <a href="index.html#story" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Our Story</a>
+          <a href="#faq" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">FAQ</a>
+          <a href="#contact" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Contact</a>
+          <a href="cart.html" class="inline-flex items-center gap-2 border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Cart">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+            <span>Cart</span>
+            <span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span>
+          </a>
+        </nav>
+
+        <a href="cart.html" class="relative ml-auto flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Cart">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+          <span data-cart-count class="absolute right-0 top-0 inline-flex min-w-[1.1rem] items-center justify-center bg-[#7A3E4D] px-1 py-0.5 text-[9px] font-semibold leading-none text-white">0</span>
+        </a>
+
+        <button id="menu-toggle" class="flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
+          <svg id="menu-open-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-[#526847] bg-[#657A58] text-[#FFF8EC] md:hidden">
+        <div class="flex flex-col">
+          <a href="index.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Home</a>
+          <a href="all-jars.html" aria-current="page" class="border-b border-[#FFF8EC]/20 bg-[#526847] px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Products</a>
+          <a href="location.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Locations</a>
+          <a href="index.html#story" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Our Story</a>
+          <a href="#faq" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">FAQ</a>
+          <a href="#contact" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Contact</a>
+          <a href="cart.html" class="flex items-center justify-between border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]"><span>Cart</span><span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="products" class="border-y border-brand-border bg-[#f4ece0] py-14 lg:py-20">
+        <div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+          <div class="mb-8 max-w-2xl lg:mb-10">
+            <h2 class="font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-[#3A241B] lg:text-[30px]">Complete Jarmade Collection</h2>
+          </div>
+          <div id="all-jars-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-brand-cream py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl px-6 lg:px-12">
+          <h2 class="font-display text-[22px] font-normal leading-[1.1] tracking-[-0.02em] text-[#3A241B] lg:text-[30px]">Frequently Asked Questions</h2>
+          <div class="mt-8 divide-y divide-brand-border border-y border-brand-border" id="all-jars-faq"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-[#657A58] px-6 py-16 text-[#FFF8EC] lg:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="border border-[#DCCDBA] bg-[#FFFDF8] p-4 shadow-[0_22px_60px_rgba(44,26,14,0.18)] sm:p-6 lg:grid lg:grid-cols-[0.72fr_1fr] lg:gap-8 lg:p-8">
+            <div class="border-b border-[#DCCDBA] pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+              <p class="font-display text-[24px] font-normal leading-tight text-[#3A241B]">Contact Details</p>
+              <p class="mt-4 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">
+                Irresistible Foods LLC<br />Owner: Michael Ballard<br /><a href="tel:+17744372055" class="text-[#E9DADF] hover:underline">774-437-2055</a><br />
+                Charlotte, NC<br />
+                United States
+              </p>
+              <div class="mt-6 border border-[#DCCDBA] bg-[#FFF8ED] p-4">
+                <p class="font-sans text-[11px] font-medium uppercase leading-none tracking-[0.18em] text-[#7B5F4E]">Current Location</p>
+                <p class="mt-2 font-display text-[18px] font-normal leading-tight text-[#3A241B]">Springs Farm</p>
+                <p class="mt-2 font-sans text-[14px] font-normal leading-[1.7] text-[#6B5145]">
+                  1010 Springfield Parkway<br />
+                  Fort Mill, SC 29715<br />
+                  <a href="tel:18039846344" class="font-semibold text-[#7A3E4D] hover:underline">803-984-6344</a>
+                </p>
+              </div>
+              <a href="mailto:michaelstewartballard@gmail.com" class="mt-5 inline-block font-sans text-[14px] font-semibold text-[#7A3E4D] hover:underline">michaelstewartballard@gmail.com</a>
+            </div>
+
+            <div class="mt-8 lg:mt-0">
+              <p class="font-display text-[24px] font-normal leading-tight text-[#3A241B]">Ask about availability</p>
+              <p class="mt-3 font-sans text-[15px] font-normal leading-[1.7] text-[#6B5145]">Tell us which jar you are interested in and what you would like to know.</p>
+              <p class="mt-3 font-sans text-[13px] font-medium text-[#7A3E4D]">We usually reply within 1-2 business days.</p>
+
+              <form id="order-form" action="/api/contact" method="POST" class="mt-6">
+                <input type="hidden" name="_subject" value="New Jarmade product inquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_csrf" value="" data-csrf-field />
+                <label class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Name</span><input id="form-name" name="name" required type="text" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Email</span><input id="form-email" name="email" required type="email" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Phone</span><input id="form-phone" name="phone" type="tel" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20" /></label>
+                  <label class="block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Product</span><select id="form-product" name="product" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20"><option value="General availability">General availability</option></select></label>
+                </div>
+                <label class="mt-5 block"><span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Message</span><textarea id="form-message" name="message" rows="5" class="w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" placeholder="Ask about nearby farmers markets, current availability, pickup options, gift baskets, or wholesale questions."></textarea></label>
+                <button type="submit" class="mt-6 w-full bg-[#7A3E4D] px-8 py-4 font-sans text-[14px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Send Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-brown text-brand-cream">
+      <div class="mx-auto max-w-[1500px] px-6 py-6 lg:px-8 lg:py-8">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">About</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="mailto:michaelstewartballard@gmail.com" class="hover:text-[#E9DADF]">Contact Us</a></li>
+              <li><a href="index.html#story" class="hover:text-[#E9DADF]">About Us</a></li>
+              <li><a href="location.html" class="hover:text-[#E9DADF]">Locations</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Shop</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="all-jars.html" class="hover:text-[#E9DADF]">All Products</a></li>
+              <li><a href="all-jars.html" class="hover:text-[#E9DADF]">Bestsellers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Help</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Cancellations & Returns</a></li>
+              <li><a href="#faq" class="hover:text-[#E9DADF]">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Consumer Policy</h3>
+            <ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75">
+              <li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Return Policy</a></li>
+              <li><a href="pages/terms-of-use.html" class="hover:text-[#E9DADF]">Terms of Use</a></li>
+              <li><a href="pages/security.html" class="hover:text-[#E9DADF]">Security</a></li>
+              <li><a href="pages/privacy.html" class="hover:text-[#E9DADF]">Privacy</a></li>
+              <li><a href="pages/sitemap.html" class="hover:text-[#E9DADF]">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Contact Us</h3>
+            <p class="font-sans text-[13px] font-normal leading-[1.8] text-brand-cream/75">
+              Irresistible Foods LLC<br />Owner: Michael Ballard<br /><a href="tel:+17744372055" class="text-[#E9DADF] hover:underline">774-437-2055</a><br />
+              Charlotte, NC<br />
+              United States<br /><br />
+              <a href="mailto:michaelstewartballard@gmail.com" class="text-[#E9DADF] hover:underline">michaelstewartballard@gmail.com</a>
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Social</h3>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-sage text-white">f</a>
+              <a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full bg-[#7A3E4D] text-white">ig</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      async function getProducts() {
+        const response = await fetch('/api/products');
+
+        if (!response.ok) {
+          throw new Error('Unable to load products');
+        }
+
+        return response.json();
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, (character) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[character]);
+      }
+
+      function escapeAttribute(value) {
+        return escapeHtml(value).replace(/`/g, '&#96;');
+      }
+
+      async function initAllJarsPage() {
+        const productList = await getProducts();
+        const productEntries = productList.map((product) => [product.slug, product]);
+        const products = Object.fromEntries(productEntries);
+        const productGrid = document.getElementById('all-jars-grid');
+        const productSelect = document.getElementById('form-product');
+
+      productGrid.innerHTML = productEntries.map(([key, product]) => {
+        const slug = escapeAttribute(key);
+        const cardImage = escapeAttribute(product.cardImage);
+        const name = escapeHtml(product.name);
+        const nameAttribute = escapeAttribute(product.name);
+        const label = escapeHtml(product.cardLabel || product.category);
+        const description = escapeHtml(product.cardDescription || product.description);
+        const bestWith = escapeHtml(product.bestWith);
+        const productId = Number(product.id) || 0;
+        return `
+        <article class="group flex h-full flex-col border border-brand-border bg-brand-cream transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+          <a href="products/${slug}.html" class="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">
+            <div class="aspect-square bg-[#FDF6EC] p-8"><img src="${cardImage}" alt="${cardImage.includes('brand-assets/') ? 'Jarmade logo' : nameAttribute + ' jar'}" loading="lazy" class="h-full w-full object-contain object-center" /></div>
+          </a>
+          <div class="flex flex-1 flex-col border-t border-brand-border px-5 py-5">
+            <p class="mb-2 font-sans text-[11px] font-medium uppercase leading-none tracking-[0.18em] text-[#7B5F4E]">${label}</p>
+            <h3 class="mb-2 font-display text-[19px] font-normal leading-[1.2] tracking-[-0.01em] text-[#3A241B]"><a href="products/${slug}.html" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">${name}</a></h3>
+            <p data-product-price class="mb-3 font-sans text-[19px] font-semibold text-brand-brown">${new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(product.priceCents / 100)}</p>
+            <p class="mb-3 font-sans text-[14px] font-normal leading-[1.7] text-[#5f4636]">${description}</p>
+            <p class="mt-auto border-t border-brand-border pt-4 font-sans text-[13px] font-normal leading-[1.6] text-[#7B5F4E]"><span class="font-medium not-italic">Best with:</span> ${bestWith}</p>
+            <div class="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <a href="products/${slug}.html" class="font-sans text-[13px] font-semibold text-[#7A3E4D] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">View jar <span aria-hidden="true">→</span></a>
+              <a href="all-jars.html?product=${slug}#contact" class="font-sans text-[13px] font-semibold text-[#7A3E4D] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Ask availability</a>
+            </div>
+            <button type="button" data-add-to-cart data-product-id="${productId}" class="mt-4 w-full bg-[#7A3E4D] px-6 py-3 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Add to cart</button>
+          </div>
+        </article>
+      `;
+      }).join('');
+
+      productEntries.forEach(([key, product]) => {
+        const option = document.createElement('option');
+        option.value = product.name;
+        option.dataset.slug = key;
+        option.textContent = product.name;
+        productSelect?.appendChild(option);
+      });
+
+      const requestedProduct = new URLSearchParams(window.location.search).get('product');
+      if (requestedProduct && products[requestedProduct] && productSelect) {
+        productSelect.value = products[requestedProduct].name;
+      }
+
+      const faqs = [
+        ['What ingredients are used?', 'Jarmade highlights fruit-forward flavor and reduced sweetness. For exact ingredient details for a specific jar, contact Jarmade before ordering or purchasing.'],
+        ['How should I store a jar?', 'Storage instructions can vary by product and batch. Please follow the label on your jar and contact Jarmade with any product-specific questions.'],
+        ['Does it need refrigeration after opening?', 'Please follow the jar label for refrigeration instructions. If you are unsure, contact Jarmade before using the product.'],
+        ['What is the shelf life?', 'Shelf life depends on the product and batch. Check the jar label for dates and contact Jarmade if you need current details before purchasing.'],
+        ['Do the jars contain allergens or meet specific dietary needs?', 'Exact allergen and dietary information should be confirmed directly with Jarmade before purchase, especially if you have a food allergy or dietary restriction.'],
+        ['Can I order multiple jars?', 'Yes, you can ask about multiple jars, gift baskets, or larger requests through the contact form. Availability may vary by current batch.'],
+        ['Can I pick up locally or find Jarmade at farmers markets?', 'Jarmade is currently available at Springs Farm, 1010 Springfield Parkway, Fort Mill, SC 29715. Call 803-984-6344 or use the contact form to ask about current jars.'],
+        ['Do you ship or deliver?', 'Shipping and delivery options can vary by order, batch, and destination. Use checkout for available shipping details, or send a message through the contact form if you need help before ordering.']
+      ];
+
+      document.getElementById('all-jars-faq').innerHTML = faqs.map(([question, answer], index) => `
+        <div class="faq-item">
+          <h3>
+            <button id="faq-trigger-${index + 1}" type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left font-sans text-[15px] font-semibold leading-snug text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A]" aria-expanded="false" aria-controls="faq-panel-${index + 1}">
+              <span>${question}</span>
+              <span class="faq-icon flex h-7 w-7 flex-shrink-0 items-center justify-center border border-[#7A3E4D] text-[20px] leading-none text-[#7A3E4D]" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div id="faq-panel-${index + 1}" class="faq-panel hidden pb-5 pr-11" role="region" aria-labelledby="faq-trigger-${index + 1}">
+            <p class="font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">${answer}</p>
+          </div>
+        </div>
+      `).join('');
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+
+      function setMobileMenuOpen(isOpen) {
+        mobileMenu?.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+        menuToggle?.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      menuToggle?.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        setMobileMenuOpen(!expanded);
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMobileMenuOpen(false);
+        }
+      });
+
+      const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+
+      function resetMobileMenuOnDesktop(event) {
+        if (event.matches) {
+          setMobileMenuOpen(false);
+        }
+      }
+
+      desktopMediaQuery.addEventListener('change', resetMobileMenuOnDesktop);
+      resetMobileMenuOnDesktop(desktopMediaQuery);
+
+      const faqTriggers = Array.from(document.querySelectorAll('.faq-trigger'));
+
+      function setFaqItemOpen(trigger, isOpen) {
+        const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        const icon = trigger.querySelector('.faq-icon');
+
+        trigger.setAttribute('aria-expanded', String(isOpen));
+        trigger.style.backgroundColor = isOpen ? '#E9DADF' : '';
+        trigger.style.color = isOpen ? '#7A3E4D' : '';
+        panel?.classList.toggle('hidden', !isOpen);
+
+        if (icon) {
+          icon.textContent = isOpen ? '-' : '+';
+          icon.style.backgroundColor = isOpen ? '#E9DADF' : '';
+          icon.style.borderColor = '#7A3E4D';
+          icon.style.color = '#7A3E4D';
+        }
+      }
+
+      faqTriggers.forEach((trigger, index) => {
+        trigger.addEventListener('click', () => {
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          setFaqItemOpen(trigger, !isExpanded);
+        });
+
+        trigger.addEventListener('keydown', (event) => {
+          let nextIndex = null;
+          if (event.key === 'ArrowDown') nextIndex = (index + 1) % faqTriggers.length;
+          if (event.key === 'ArrowUp') nextIndex = (index - 1 + faqTriggers.length) % faqTriggers.length;
+          if (event.key === 'Home') nextIndex = 0;
+          if (event.key === 'End') nextIndex = faqTriggers.length - 1;
+
+          if (nextIndex !== null) {
+            event.preventDefault();
+            faqTriggers[nextIndex]?.focus();
+          }
+        });
+      });
+      }
+
+      initAllJarsPage().catch((error) => {
+        console.error('Unable to load products', error);
+      });
+    </script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

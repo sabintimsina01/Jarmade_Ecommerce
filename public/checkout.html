@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Jarmade</title>
+    <meta name="description" content="Checkout securely for Jarmade small-batch conserves and relish." />
+    <link rel="icon" type="image/png" href="/images/brand-assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/brand-assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="z-50 border-b border-brand-border bg-[#F8F0E4] text-[#3A241B] shadow-sm">
+      <div class="mx-auto flex h-[68px] max-w-[1500px] items-center justify-between gap-6 px-4 lg:px-6">
+        <a href="index.html" class="flex flex-shrink-0 items-center border border-transparent px-2 py-1 transition-colors hover:border-[#657A58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Jarmade home">
+          <img src="images/brand-assets/jarmade-logo.png" alt="Jarmade handcrafted small batch" class="h-11 w-auto object-contain sm:h-12" />
+        </a>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+          <a href="index.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Home</a>
+          <a href="all-jars.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Products</a>
+          <a href="location.html" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Locations</a>
+          <a href="index.html#story" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Our Story</a>
+          <a href="index.html#faq" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">FAQ</a>
+          <a href="index.html#contact" class="border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Contact</a>
+          <a href="cart.html" class="inline-flex items-center gap-2 border border-transparent px-3 py-2 font-sans text-[13px] font-medium text-[#3A241B] transition-colors hover:border-[#657A58]/35 hover:bg-[#657A58]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]" aria-label="Cart">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+            <span>Cart</span>
+            <span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span>
+          </a>
+        </nav>
+
+        <a href="cart.html" class="relative ml-auto flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Cart">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h15l-2 8H8L6 7ZM6 7 5 3H3"></path><path stroke-linecap="round" d="M9 20h.01M18 20h.01"></path></svg>
+          <span data-cart-count class="absolute right-0 top-0 inline-flex min-w-[1.1rem] items-center justify-center bg-[#7A3E4D] px-1 py-0.5 text-[9px] font-semibold leading-none text-white">0</span>
+        </a>
+
+        <button id="menu-toggle" class="flex h-10 w-10 flex-shrink-0 items-center justify-center text-[#3A241B] transition-colors hover:text-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A] md:hidden" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false" type="button">
+          <svg id="menu-open-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-[#526847] bg-[#657A58] text-[#FFF8EC] md:hidden">
+        <div class="flex flex-col">
+          <a href="index.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Home</a>
+          <a href="all-jars.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Products</a>
+          <a href="location.html" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Locations</a>
+          <a href="index.html#story" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Our Story</a>
+          <a href="index.html#faq" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">FAQ</a>
+          <a href="index.html#contact" class="border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]">Contact</a>
+          <a href="cart.html" class="flex items-center justify-between border-b border-[#FFF8EC]/20 px-4 py-3.5 font-sans text-[15px] font-normal text-[#FFF8EC] transition-colors hover:bg-[#526847] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#A76A7A] active:bg-[#60303C]"><span>Cart</span><span data-cart-count class="inline-flex min-w-[1.35rem] items-center justify-center bg-[#7A3E4D] px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="bg-brand-cream">
+      <section class="mx-auto max-w-7xl px-6 py-14 lg:px-12 lg:py-20">
+        <div class="mb-8 max-w-2xl">
+          <h1 class="font-display text-[30px] font-normal leading-[1.08] tracking-[-0.02em] text-[#3A241B] sm:text-[38px] lg:text-[48px]">Checkout</h1>
+          <p class="mt-5 font-sans text-[15px] font-normal leading-[1.75] text-[#6B5145]">Enter shipping details, then continue to Stripe for secure payment.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
+          <form id="checkout-form" class="border border-brand-border bg-[#FFF8ED] p-5 shadow-sm sm:p-6 lg:p-8">
+            <h2 class="font-display text-[24px] font-normal leading-tight text-[#3A241B]">Shipping Details</h2>
+            <div id="checkout-error" class="mt-5 hidden border border-[#7A3E4D] bg-[#E9DADF] px-4 py-3 font-sans text-[14px] font-semibold text-[#60303C]" role="alert"></div>
+
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <label class="block sm:col-span-2">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Email</span>
+                <input name="email" required type="email" autocomplete="email" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Shipping Name</span>
+                <input name="shippingName" required type="text" autocomplete="name" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Address Line 1</span>
+                <input name="addressLine1" required type="text" autocomplete="address-line1" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Address Line 2</span>
+                <input name="addressLine2" type="text" autocomplete="address-line2" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20" />
+              </label>
+              <label class="block">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">City</span>
+                <input name="city" required type="text" autocomplete="address-level2" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">State</span>
+                <input name="state" required type="text" autocomplete="address-level1" maxlength="30" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">ZIP Code</span>
+                <input name="postalCode" required type="text" autocomplete="postal-code" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#A76A7A] focus:ring-2 focus:ring-[#A76A7A]/25" />
+              </label>
+              <label class="block">
+                <span class="mb-2 block font-sans text-[13px] font-medium text-[#3A241B]">Country</span>
+                <input name="country" required type="text" autocomplete="country-name" value="US" class="min-h-[48px] w-full border border-[#DCCDBA] bg-[#FFFDF8] px-4 py-3 font-sans text-[15px] font-normal text-[#3A241B] outline-none transition-colors focus:border-[#657A58] focus:ring-2 focus:ring-[#657A58]/20" />
+              </label>
+            </div>
+
+            <button id="checkout-submit" type="submit" class="mt-7 w-full bg-[#7A3E4D] px-8 py-4 font-sans text-[14px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Continue to Stripe Checkout</button>
+            <p class="mt-4 font-sans text-[13px] font-normal leading-[1.6] text-[#6B5145]">Payment is handled on Stripe's secure checkout page. Jarmade does not store card numbers.</p>
+          </form>
+
+          <aside id="checkout-summary">
+            <div class="border border-brand-border bg-[#FFF8ED] p-5 font-sans text-[15px] font-normal text-[#6B5145]">Loading order summary...</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-brown text-brand-cream">
+      <div class="mx-auto max-w-[1500px] px-6 py-6 lg:px-8 lg:py-8">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+          <div><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">About</h3><ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75"><li><a href="mailto:michaelstewartballard@gmail.com" class="hover:text-[#E9DADF]">Contact Us</a></li><li><a href="index.html#story" class="hover:text-[#E9DADF]">About Us</a></li><li><a href="location.html" class="hover:text-[#E9DADF]">Locations</a></li></ul></div>
+          <div><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Shop</h3><ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75"><li><a href="all-jars.html" class="hover:text-[#E9DADF]">All Products</a></li><li><a href="cart.html" class="hover:text-[#E9DADF]">Cart</a></li></ul></div>
+          <div><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Help</h3><ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75"><li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Cancellations & Returns</a></li><li><a href="index.html#faq" class="hover:text-[#E9DADF]">FAQ</a></li></ul></div>
+          <div><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Consumer Policy</h3><ul class="space-y-2.5 font-sans text-[13px] font-normal text-brand-cream/75"><li><a href="pages/return-policy.html" class="hover:text-[#E9DADF]">Return Policy</a></li><li><a href="pages/terms-of-use.html" class="hover:text-[#E9DADF]">Terms of Use</a></li><li><a href="pages/security.html" class="hover:text-[#E9DADF]">Security</a></li><li><a href="pages/privacy.html" class="hover:text-[#E9DADF]">Privacy</a></li><li><a href="pages/sitemap.html" class="hover:text-[#E9DADF]">Sitemap</a></li></ul></div>
+          <div class="col-span-2 sm:col-span-1"><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Contact Us</h3><p class="font-sans text-[13px] font-normal leading-[1.8] text-brand-cream/75">Irresistible Foods LLC<br />Owner: Michael Ballard<br /><a href="tel:+17744372055" class="text-[#E9DADF] hover:underline">774-437-2055</a><br />Charlotte, NC<br />United States<br /><br /><a href="mailto:michaelstewartballard@gmail.com" class="text-[#E9DADF] hover:underline">michaelstewartballard@gmail.com</a></p></div>
+          <div><h3 class="mb-4 font-sans text-[11px] font-semibold uppercase tracking-widest text-[#E9DADF]">Social</h3><div class="flex gap-3"><a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-sage text-white">f</a><a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full bg-[#7A3E4D] text-white">ig</a></div></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+      function setMobileMenuOpen(isOpen) {
+        mobileMenu?.classList.toggle('hidden', !isOpen);
+        openIcon?.classList.toggle('hidden', isOpen);
+        closeIcon?.classList.toggle('hidden', !isOpen);
+        menuToggle?.setAttribute('aria-expanded', String(isOpen));
+      }
+      menuToggle?.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        setMobileMenuOpen(!expanded);
+      });
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMobileMenuOpen(false);
+        }
+      });
+      const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+      function resetMobileMenuOnDesktop(event) {
+        if (event.matches) {
+          setMobileMenuOpen(false);
+        }
+      }
+      desktopMediaQuery.addEventListener('change', resetMobileMenuOnDesktop);
+      resetMobileMenuOnDesktop(desktopMediaQuery);
+    </script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
