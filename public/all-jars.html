@@ -181,15 +181,11 @@
       </div>
     </footer>
 
+    <script src="/products/catalog-data.js"></script>
+    <script src="/js/catalog-client.js"></script>
     <script>
       async function getProducts() {
-        const response = await fetch('/api/products');
-
-        if (!response.ok) {
-          throw new Error('Unable to load products');
-        }
-
-        return response.json();
+        return window.JarmadeCatalog.list();
       }
 
       function escapeHtml(value) {
@@ -237,7 +233,7 @@
               <a href="products/${slug}.html" class="font-sans text-[13px] font-semibold text-[#7A3E4D] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">View jar <span aria-hidden="true">→</span></a>
               <a href="all-jars.html?product=${slug}#contact" class="font-sans text-[13px] font-semibold text-[#7A3E4D] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Ask availability</a>
             </div>
-            <button type="button" data-add-to-cart data-product-id="${productId}" class="mt-4 w-full bg-[#7A3E4D] px-6 py-3 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Add to cart</button>
+            ${productId ? `<button type="button" data-add-to-cart data-product-id="${productId}" class="mt-4 w-full bg-[#7A3E4D] px-6 py-3 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Add to cart</button>` : `<a href="mailto:michaelstewartballard@gmail.com" class="mt-4 inline-block bg-[#7A3E4D] px-6 py-3 text-center font-sans text-[13px] font-semibold text-white">Contact to order</a>`}
           </div>
         </article>
       `;

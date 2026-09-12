@@ -1,3 +1,24 @@
+# Cloudflare deployment correction
+
+Live diagnosis on September 12: https://jarmade.com/all-jars.html redirects to
+/all-jars and returns HTML, but /api/products returns 404. The product grid was
+empty because it depended entirely on that API.
+
+The catalog client now prefers the Node API and falls back to the bundled catalog
+when it is unavailable. All Jars, home, and product details work as static assets.
+Fallback listings use Contact to order; they do not pretend checkout is available.
+This is a catalog display fix, not a migration of Express, SQLite, sessions,
+contact submissions, or Stripe checkout to Cloudflare Workers.
+
+For Cloudflare Pages Git builds: build command `npm run build:css`, output directory
+`public`. For direct upload, use the separate Cloudflare Catalog ZIP with index.html
+at the archive root. Neither method runs server.js or provisions the backend.
+For Node hosting, use the existing instructions below; live API shopping is retained.
+
+Verified using Wrangler Pages 4.131.1 locally: /, /all-jars.html -> /all-jars,
+/all-jars, all nine product pages, current prices and mobile navigation. Also
+verified Node API add-to-cart still works. The live domain has not been redeployed.
+
 # Jarmade Deployment Checklist
 
 ## Required Environment Variables

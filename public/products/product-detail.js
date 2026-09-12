@@ -25,8 +25,8 @@ function escapeAttribute(value) {
 async function initProductPage() {
   const slug = document.body.dataset.productSlug;
   const [product, productList] = await Promise.all([
-    getJson(`/api/products/${slug}`),
-    getJson('/api/products')
+    window.JarmadeCatalog.get(slug),
+    window.JarmadeCatalog.list()
   ]);
   const related = productList
   .filter((item) => item.slug !== slug)
@@ -159,7 +159,7 @@ document.getElementById('product-page').innerHTML = `
             </div>
           </div>
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <button type="button" data-add-to-cart data-product-id="${safeProductId}" class="bg-[#7A3E4D] px-8 py-3.5 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Add to cart</button>
+            ${safeProductId ? `<button type="button" data-add-to-cart data-product-id="${safeProductId}" class="bg-[#7A3E4D] px-8 py-3.5 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Add to cart</button>` : `<a href="mailto:michaelstewartballard@gmail.com" class="mt-4 inline-block bg-[#7A3E4D] px-6 py-3 text-center font-sans text-[13px] font-semibold text-white">Contact to order</a>`}
             <a href="../all-jars.html?product=${safeSlug}#contact" class="bg-[#7A3E4D] px-8 py-3.5 text-center font-sans text-[13px] font-semibold text-white transition-colors hover:bg-[#60303C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A76A7A]">Find a Location Near You</a>
             <a href="../all-jars.html" class="border border-brand-brown px-8 py-3.5 text-center font-sans text-[13px] font-medium text-brand-brown transition-colors hover:bg-brand-brown hover:text-brand-cream">Back to Products</a>
           </div>

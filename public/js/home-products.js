@@ -9,9 +9,7 @@
   }
 
   try {
-    const response = await fetch('/api/products');
-    if (!response.ok) throw new Error('Unable to load products');
-    const products = await response.json();
+    const products = await window.JarmadeCatalog.list();
     if (!products.length) throw new Error('The catalog is empty');
     grid.innerHTML = products.map((product) => {
       const image = product.cardImage || product.image;

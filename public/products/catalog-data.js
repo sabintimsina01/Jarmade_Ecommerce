@@ -1,4 +1,4 @@
-// Seed source for the SQLite-backed product API. Prices are in USD cents.
+// Shared seed and static-host fallback catalog. Prices are in USD cents.
 window.JARMADE_PRODUCTS = {
   "strawberry-smash-conserve": {
     "priceCents": 900,
